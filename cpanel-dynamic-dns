@@ -123,12 +123,12 @@ load_config ()
     else
         CFGMESSAGE1="== /etc/$BASEDIR.conf does not exist"
     fi
-    if [ -e "$HOMEDIR/etc/$BASEDIR.conf" ]; then
-        chmod 0600 $HOMEDIR/etc/$BASEDIR.conf
-        . $HOMEDIR/etc/$BASEDIR.conf
-        CFGMESSAGE2="== $HOMEDIR/etc/$BASEDIR.conf is being used for configuration"
+    if [ -e "$HOMEDIR/usr/local/etc/$BASEDIR.conf" ]; then
+        chmod 0600 $HOMEDIR/usr/local/etc/$BASEDIR.conf
+        . $HOMEDIR/usr/local/etc/$BASEDIR.conf
+        CFGMESSAGE2="== $HOMEDIR/usr/local/etc/$BASEDIR.conf is being used for configuration"
     else
-        CFGMESSAGE2="== $HOMEDIR/etc/$BASEDIR.conf does not exist"
+        CFGMESSAGE2="== $HOMEDIR/usr/local/etc/$BASEDIR.conf does not exist"
     fi
 }
 
